@@ -91,16 +91,32 @@ li a:hover:not(.active) {
 }
 
 .columnSection:nth-child(1){
-  background-color: #c0dbe2;
+  background-color: #8FC1E3;
 }
 
 .columnSection:nth-child(2){
-  background-color: #cdf1c3;
+  background-color: #5085A5;
 }
 
 .columnSection:nth-child(3){
-  background-color: #ccb9da;
+  background-color: #31708E;
 }
+
+.columnSection h2{
+  color: black;
+  font-family: monospace;
+  font-size: 2.15vw;
+}
+
+.columnSection p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.25vw;
+}
+
+
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media (min-width:900px) {
   .overallContainer{
@@ -164,7 +180,7 @@ li a:hover:not(.active) {
   overflow: hidden;
   padding: 70px 0;
   box-sizing: border-box;
-  background-color: #18181a;
+  background-color: #5A5560;
 }
 
 .inner_footer{
