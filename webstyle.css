@@ -45,7 +45,9 @@ li a:hover:not(.active) {
 
 @media screen and (max-width: 600px) {
   ul.topnav li.right,
-  ul.topnav li {float: none;}
+  ul.topnav li {
+    float: none;
+  }
 }
 
 /*Main page (center content) */
@@ -252,4 +254,30 @@ li a:hover:not(.active) {
     width: 100%;
     margin-bottom: 30px;
   }
+}
+
+/*ratiosMain page block UI */
+.ratioContainerOverall {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  background-color: DodgerBlue;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.ratioContainer {
+  background-color: #f1f1f1;
+  width: 90%;
+  margin: 15px;
+  text-align: center;
+}
+
+.ratioContainer h3 {
+
+}
+
+.ratioContainer p {
+
 }
