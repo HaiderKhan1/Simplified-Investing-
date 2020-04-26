@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coming Soon</title>
+  <link rel = "shortcut icon" type = "image png" href= "Images/favicon.png">
+<style>
+body, html {
+  height: 90%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('Images/comingSoon.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+/*footer */
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.footer {
+  width: 100%
+  display: block;
+  overflow: hidden;
+  padding: 70px 0;
+  box-sizing: border-box;
+  background-color: #5A5560;
+}
+
+.inner_footer{
+  display: block;
+  margin: 0 auto;
+  width: 1100px;
+  height: 100%;
+}
+
+.inner_footer .logo_container {
+  width: 35%;
+  float: left;
+  height: 100%;
+  display: block;
+}
+
+.inner_footer .logo_container img {
+  width: 175px;
+  height: auto;
+}
+
+.inner_footer .footer_third{
+  width: calc(21.6666667% - 20px);
+  margin-right: 10px;
+  float: left;
+  height: 100%;
+}
+
+.inner_footer .footer_third:last-child{
+  margin-right: 0;
+}
+
+.inner_footer .footer_third h1{
+  font-family: monospace;
+  font-size: 22px;
+  color: white;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.inner_footer .footer_third a{
+  font-family: monospace;
+  font-size: 18px;
+  color: white;
+  display: block;
+  font-weight: 200;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.inner_footer .footer_third li2{
+ display: inline-block;
+ font-size: 20px;
+}
+
+.inner_footer .footer_third img {
+  width: 50%;
+}
+
+@media(max-width: 600px){
+  .footer .inner_footer{
+    width: 90%;
+  }
+
+  .inner_footer .logo_container,
+  .inner_footer .footer_third{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="bgimg">
+
+
+  <div class="middle">
+    <h1> Simplified Investing </h1> <br>
+    <h1>COMING SOON</h1>
+    <hr>
+    <p id="demo" style="font-size:30px"></p> <br>
+    <p> An innovative tool that will help investors around the world to better analyze the market </p> <br>
+    <p> Follow Us for more information </p>
+  </div>
+</div>
+
+<div class = "footer">
+  <div class = "inner_footer">
+    <div class = "logo_container">
+        <img src = "Images/footer_logo.png">
+    </div>
+
+    <div class = "footer_third">
+        <h1> Need Help? </h1>
+        <a href = "#"> Contact Us: </a>
+        <a href = "#"> hkhan24@uoguelph.ca </a>
+    </div>
+
+    <div class = "footer_third">
+        <h1> More </h1>
+        <a href = "#"> Credits</a>
+        <a href = "#"> About Us </a>
+        <a href = "#"> Coming Soon </a>
+        <a href = "#"> Return Home </a>
+
+    </div>
+
+    <div class = "footer_third">
+        <h1> Follow Us </h1>
+        <li2><a href = "#"> <img src = Images/ig.png></a></li2>
+        <li2><a href = "#"> <img src = Images/linkedin.png></a></li2>
+        <li2><a href = "#"> <img src = Images/twitter.png></a></li2>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>

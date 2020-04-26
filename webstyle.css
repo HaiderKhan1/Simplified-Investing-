@@ -261,7 +261,7 @@ li a:hover:not(.active) {
   display: flex;
   width: 90%;
   flex-direction: column;
-  background-color: DodgerBlue;
+  background-color: #3FEEE6;
   justify-content: center;
   align-items: center;
 
