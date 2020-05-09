@@ -261,7 +261,7 @@ li a:hover:not(.active) {
   display: flex;
   width: 90%;
   flex-direction: column;
-  background-color: #3FEEE6;
+  background-color:#87868C;
   justify-content: center;
   align-items: center;
 
@@ -274,18 +274,22 @@ li a:hover:not(.active) {
   text-align: center;
 }
 
-.ratioContainer h3 {
-
+.ratioContainer h2 {
+  font-family: monospace;
+  font-size: 2vw;
 }
 
 .ratioContainer p {
+  font-family: sans-serif;
+  font-size: 1vw;
+  padding-bottom: 10px;
 
 }
 
 /*ratioPageMain button */
 
 .buttonRatioPage {
-  background-color: #4CAF50; /* Green */
+  background-color:#FFF748; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -293,6 +297,8 @@ li a:hover:not(.active) {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  font-weight: 500;
+  color: #000302;
   margin: 4px 2px;
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
