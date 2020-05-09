@@ -309,3 +309,33 @@ li a:hover:not(.active) {
 .buttonRatioPage:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
+/*MarketProspect Ratios overall UI */
+.ratioContainerOverallMP {
+  display: flex;
+  width: 98%;
+  flex-direction: column;
+  background-color:#87868C;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.ratioContainerMP {
+  background-color: #f1f1f1;
+  width: 92%;
+  margin: 20px;
+  text-align: center;
+}
+
+.ratioContainerMP h2 {
+  font-family: monospace;
+  font-size: 2vw;
+}
+
+.ratioContainerMP p {
+  font-family: sans-serif;
+  font-size: 1vw;
+  padding-bottom: 10px;
+
+}
