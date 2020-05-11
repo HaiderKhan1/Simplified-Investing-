@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<center>
+<label for = "Net Income:"> Net Income: </label> <br>
+<input id = "netAssets" />
+<br>
+<br>
+ <label for = "Preferred Dividends:"> Preferred Dividends: </label> <br>
+<input id = "liabilities" />
+<br>
+<br>
+<button onclick="myFunction()">Calculate</button>
+<p  id="demo"> EPS: </p>
+</center>
+
+<script>
+
+function myFunction() {
+  var netAssets;
+  var liabilites;
+  var finalAnswer;
+
+  netAssets = Number(document.getElementById("netAssets").value);
+  liabilities = Number(document.getElementById("liabilities").value);
+
+  if (isNaN(netAssets) || isNaN(liabilities)) {
+
+  finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
+
+  } else if ((netAssets == "") || (liabilities == "")){
+  alert("Name must be filled out");
+
+  } else {
+
+    finalAnswer = netAssets/liabilities;
+  }
+
+  document.getElementById("demo").innerHTML = finalAnswer;
+}
+
+</script>
+
+</body>
+</html>

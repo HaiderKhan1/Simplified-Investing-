@@ -57,9 +57,24 @@
 <center>
 <div class = "ratioContainerOverallMP">
   <div class = "ratioContainerMP">
-    <h2> Market Prospect Ratios</h2> <br>
-    <p>Compare publicly traded companies stock prices with other financial measures
-      like earnings and dividend rates to figure out a stock’s current and future market value. </p>
+    <h2> Earnings Per Share (EPS) </h2> <br>
+    <p> Measures the amount of money each share of stock would receive if all of the profits were distributed
+       to the outstanding shares at the end of the year. It also shows how profitable a company is on a shareholder
+       basis. After calculating a higher EPS ratio is better than a lower one as the company is more profitable. </p>
+
+      <label for = "Net Income:"> Net Income: </label> <br>
+      <input id = "netIncome" />
+      <br>
+      <label for = "Preferred Dividends:"> Preferred Dividends: </label> <br>
+      <input id = "pD" />
+      <br>
+      <label for = "Weighted Average Common Shares Outstanding:"> Weighted Average Common Shares Outstanding: </label><br>
+      <input id = "denom" />
+      <br>
+      <br>
+      <button onclick="calcEPS()">Calculate</button>
+      <br><br>
+      <p id="demo"> EPS: </p>
 
   </div>
 
@@ -113,6 +128,37 @@
 
   </div>
 </div>
+
+<script>
+
+/* EPS Function */
+function calcEPS() {
+var netIncome;
+var pd;
+var numerator;
+var denom;
+var finalAnswer;
+
+netIncome = Number(document.getElementById("netIncome").value);
+pd = Number(document.getElementById("pd").value);
+denom = Number(document.getElementById("denom").value);
+
+if (isNaN(netIncome) || isNaN(pd) || isNaN(denom)) {
+
+  finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
+
+} else if ((netIncome == "") || (pd == "") || (denom == "")){
+alert("All Input Feilds Must Be Filled");
+
+} else {
+
+numerator = netIncome - pd;
+finalAnswer = numerator / denom;
+}
+document.getElementById("demo").innerHTML = finalAnswer;
+}
+
+</script>
 
 
 </body>
