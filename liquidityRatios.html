@@ -39,10 +39,9 @@
    </h1>
    <br>
    <p style="font-family: Parkavenue; font-size:1.5vw;">
-     Market Prospect ratios are mainly used by investors to compare publicly traded companies’
-     stock prices with other financial measures such as earnings per share and dividend payouts.
-     Not only that, market prospect ratios help investors analyze current stock price trends,
-     and dividend measurements which they can use to determine future market value of shares.
+  Liquidity ratios show how much cash a business has and their ability to turn other assets into
+  cash to pay off both its current and future liabilities as they come due. Furthermore, liquidity
+  ratios are also a measure of how easily a company can raise cash or convert other assets into cash.
     </p>
 </center>
 <br>
@@ -55,91 +54,55 @@
 <center>
 <div class = "ratioContainerOverallMP">
   <div class = "ratioContainerMP">
-    <h2> Earnings Per Share (EPS) </h2> <br>
-    <p> Measures the amount of money each share of stock would receive if all of the profits were distributed
-       to the outstanding shares at the end of the year. It also shows how profitable a company is on a shareholder
-       basis. After calculating a higher EPS ratio is better than a lower one as the company is more profitable. </p>
+    <h2> Quick Ratio </h2> <br>
+    <p>
+      Measures the ability of a company to pay its current liabilities when they come due with
+      only quick assets which are current assets such as marketable securities, cash and cash equivalents.
+      Higher quick ratios are imperative for companies as it shows the company is generating enough quick assets
+      (cash) to cover current liabilities. Moreover, a quick ratio of 1 shows that quick assets equal current
+      liabilities. Additionally, a quick ratio of over 1 will show there are quick assets leftover after paying
+      current liabilities.
+  </p>
 
-      <label for = "Net Income:"> Net Income: </label> <br>
-      <input id = "netIncome" />
+      <label for = "Total Current Assets:">Total Current Assets: </label> <br>
+      <input id = "currentAssets" />
       <br>
-      <label for = "Preferred Dividends:"> Preferred Dividends: </label> <br>
-      <input id = "pD" />
+      <label for = "Inventory:"> Inventory : </label> <br>
+      <input id = "inventory" />
       <br>
-      <label for = "Weighted Average Common Shares Outstanding:"> Weighted Average Common Shares Outstanding: </label><br>
-      <input id = "denom" />
+      <label for = "Prepaid Expenses:"> Prepaid Expenses: </label><br>
+      <input id = "preExpense" />
+      <br>
+      <label for = "CurrentLiabilites:"> Current Liabilities: </label><br>
+      <input id = "cL" />
       <br>
       <br>
-      <button class="buttonCalc" <button onclick="calcEPS()"> Calculate</button>
+      <button class="buttonCalc" <button onclick="calcquickRatio()"> Calculate</button>
       <br><br>
-      <p id="EPS"> Earnings Per Share: </p>
+      <p id="quickRatio"> Quick Ratio: </p>
 
   </div>
 
   <div class = "ratioContainerMP">
-    <h2> Price Earnings P/E Ratio  </h2> <br>
-    <p>Shows what the market is willing to pay for a stock based on its current earnings. Investors
-       use the P/E ratio to evaluate a stock’s fair market value by predicting future earnings per share.
-       Furthermore, it also allows investors to analyze how much they should pay for a stock based on its current
-       earnings. A company with a high P/E ratio indicates positive future performance and growth, and a low P/E
-       ratio indicated poor performance and future growth.  </p>
+    <h2> Working Capital / Current Ratio  </h2> <br>
+    <p>Measures the firm's ability to pay off its short term liabilities which are due
+       within the next year with its current assets. Additionally, the current ratio helps
+        investors and creditors understand the liquidity of a company and their ability to
+        pay off current liabilities. A higher current ratio is always more favourable as it
+        shows the company can easily pay off its current liabilities. Moreover, a ratio of
+        2 means that the company will have 2 times more current assets than current liabilities.
+      </p>
 
-      <label for = "Market Value Price Per Share:"> Market Value Price Per Share: </label> <br>
-      <input id = "mV" />
+      <label for = "Current Assets:"> Current Assets: </label> <br>
+      <input id = "cA" />
       <br>
-      <label for = "Earnings Per Share:"> Earnings Per Share: </label> <br>
-      <input id = "eP" />
+      <label for = "Curret Liabilities:"> Current Liabilites: </label> <br>
+      <input id = "currentL" />
       <br>
       <br>
-      <button class="buttonCalc" <button onclick="pE()"> Calculate</button>
+      <button class="buttonCalc" <button onclick="currentRatio()"> Calculate</button>
       <br><br>
-      <p id="pE"> Price Earnings Ratio: </p>
-
-
-  </div>
-
-  <div class = "ratioContainerMP">
-    <h2> Dividend Payout Ratio  </h2> <br>
-    <p>Measures the percentage of net income that is distributed to shareholders
-       in the form of dividends during the year. This ratio is imperative for investors
-       as it shows if the company pays out a reasonable portion of net income to investors.
-       Furthermore, when analyzing a high payout ratio is good; however, a consistent trend
-       in this ratio is more important. Therefore, calculate this ratio for multiple years and analyze
-       whether this ratio remains consistent or whether it’s declining.   </p>
-
-      <label for = "Total Dividends:"> Total Dividends: </label> <br>
-      <input id = "tD" />
-      <br>
-      <label for = "Net Income:"> Net Income: </label> <br>
-      <input id = "netIncome_td" />
-      <br>
-      <br>
-      <button class="buttonCalc" <button onclick="dP()"> Calculate</button>
-      <br><br>
-      <p id="dP"> Dividend Payout Ratio: </p>
-
-
-  </div>
-
-  <div class = "ratioContainerMP">
-    <h2> Dividend Payout Ratio  </h2> <br>
-    <p>The dividend yield is a financial ratio that measures the amount of cash dividends distributed
-      to common shareholders relative to the market value per share. Moreover, investors can use the
-      dividend yield formula to analyze their return on investments in stocks, and know how much dividends
-      they are getting for every dollar that the stock is worth. When analyzing, a high dividend yield pays
-      it’s investors a large dividend compared to the fair market value. It is also important to understand
-      that this ratio varies in different industries i.e tech industries rarely pay dividends.   </p>
-
-      <label for = "Cash Dividends Per Share:"> Cash Dividends Per Share: </label> <br>
-      <input id = "cD" />
-      <br>
-      <label for = "Market Value Per Share:"> Market Value Per Share: </label> <br>
-      <input id = "marketValue" />
-      <br>
-      <br>
-      <button class="buttonCalc" <button onclick="dY()"> Calculate</button>
-      <br><br>
-      <p id="dY"> Dividend Payout Ratio: </p>
+      <p id="currentRatio"> Current Ratio: </p>
 
 
   </div>
@@ -183,104 +146,61 @@
 
 <script>
 
-function calcEPS() {
-var netIncome;
-var pd;
-var numerator;
-var denom;
+function calcquickRatio() {
+var currentAssets;
+var cL;
+var inventory;
+var preExpense;
 var finalAnswer;
+var numerator;
 
-netIncome = Number(document.getElementById("netIncome").value);
-pd = Number(document.getElementById("pD").value);
-denom = Number(document.getElementById("denom").value);
+currentAssets = Number(document.getElementById("currentAssets").value);
+cL = Number(document.getElementById("cL").value);
+inventory = Number(document.getElementById("inventory").value);
+preExpense = Number(document.getElementById("preExpense").value);
 
-if (isNaN(netIncome) || isNaN(pd) || isNaN(denom)) {
+if (isNaN(currentAssets) || isNaN(cL) || isNaN(inventory) || isNaN(preExpense)) {
 
   finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
 
-  } else if ((netIncome == "") || (pd == "") || (denom == "")){
+} else if ((currentAssets == "") || (cL == "") || (inventory == "") || (preExpense == "")){
   alert("All Input Feilds Must Be Filled");
 
     } else {
 
-    numerator = netIncome - pd;
-    finalAnswer = numerator / denom;
+    numerator = currentAssets - inventory - preExpense;
+    finalAnswer = numerator / cL;
 
     }
 
-document.getElementById("EPS").innerHTML = "Earning Per Share Ratio: " + finalAnswer;
+document.getElementById("quickRatio").innerHTML = "Quick Ratio: " + finalAnswer;
 
 }
 
-function pE(){
-  var mV, eP, finalAnswer;
+function currentRatio(){
+  var cA, currentL, finalAnswer;
 
-  mV = Number(document.getElementById("mV").value);
-  eP = Number(document.getElementById("eP").value);
+  cA = Number(document.getElementById("cA").value);
+  currentL = Number(document.getElementById("currentL").value);
 
-  if (isNaN(mV) || isNaN(eP)) {
+  if (isNaN(cA) || isNaN(currentL)) {
 
     finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
 
-  } else if ((mV == "") || (eP == "")){
+  } else if ((cA == "") || (currentL == "")){
     alert("All Input Feilds Must Be Filled");
 
       } else {
 
-      finalAnswer = mV / eP;
+      finalAnswer = cA / currentL;
 
       }
 
-  document.getElementById("pE").innerHTML = "Price Earnings Ratio: " + finalAnswer;
+  document.getElementById("currentRatio").innerHTML = "Current Ratio: " + finalAnswer;
 
 }
 
 
-function dP(){
-  var netIncome_td, tD, finalAnswer;
-
-  tD = Number(document.getElementById("tD").value);
-  netIncome_td = Number(document.getElementById("netIncome_td").value);
-
-  if (isNaN(tD) || isNaN(netIncome_td)) {
-
-    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
-
-  } else if ((tD == "") || (netIncome_td == "")){
-    alert("All Input Feilds Must Be Filled");
-
-      } else {
-
-      finalAnswer = tD / netIncome_td;
-
-      }
-
-  document.getElementById("dP").innerHTML = "Dividend Payout Ratio: " + finalAnswer;
-
-}
-
-function dY(){
-  var marketValue, cD, finalAnswer;
-
-  cD = Number(document.getElementById("cD").value);
-  marketValue = Number(document.getElementById("marketValue").value);
-
-  if (isNaN(cD) || isNaN(marketValue)) {
-
-    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
-
-  } else if ((cD == "") || (marketValue == "")){
-    alert("All Input Feilds Must Be Filled");
-
-      } else {
-
-      finalAnswer = cD / marketValue;
-
-      }
-
-  document.getElementById("dY").innerHTML = "Dividend Yeild: " + finalAnswer;
-
-}
 
 </script>
 
