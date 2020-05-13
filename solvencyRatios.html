@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Solvency Ratios</title>
+<link rel = "shortcut icon" type = "image png" href= "Images/favicon.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = "stylesheet" type = "text/css" href = "webstyle.css">
+</head>
+<body>
+
+  <ul class="topnav">
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="one.html">Intro to Financial Analysis</a></li>
+    <li><a href="two.html">Where to Find Financial Information</a></li>
+    <li><a href="three.html">Perform Financial Analysis</a></li>
+
+  </ul>
+
+<header>
+    <a href="home.html">
+    <img src="Images/logo_transparent.png" alt="Logo" style = width:30%;>
+  </a>
+</header>
+
+<br>
+<br>
+
+
+<div class="row">
+
+  <div class = "column side">
+  </div>
+
+  <div class="column middle">
+    <center>
+    <h1 style = "font-size: 3vw; font-family: sans-serif;">
+   Solvency Ratios  </font>
+   </h1>
+   <br>
+   <p style="font-family: Parkavenue; font-size:1.5vw;">
+   Solvency ratios measure a company’s ability to sustain operations and pay its liabilities
+   in the long term by comparing debt levels with equity, assets and earnings. Additionally,
+   solvency ratios show a company’s ability to make payments and pay off its long term obligations,
+   better ratios indicate that a company is financially stable.
+    </p>
+</center>
+<br>
+</div>
+
+<div class = "column side">
+  </div>
+</div>
+
+<center>
+<div class = "ratioContainerOverallMP">
+  <div class = "ratioContainerMP">
+    <h2> Debt to Equity Ratio </h2> <br>
+    <p>
+  This ratio shows the percentage of a company’s financing that comes from creditors and investors.
+  Furthermore, a higher debt to equity ratio indicates that most of the company’s financing comes
+  from creditors (loans) than investor financing (shareholders). A lower debt to equity ratio indicates
+  a company is more financially stable, whereas company’s with a higher debt to equity ratio are considered
+  risky as their debts need to be paid back to creditors.
+  </p>
+
+      <label for = "Total Liabilites:">Total Liabilites: </label> <br>
+      <input id = "totalL" />
+      <br>
+      <label for = "Total Equity:"> Total Equity : </label> <br>
+      <input id = "totalE" />
+      <br>
+      <br>
+      <button class="buttonCalc" <button onclick="calcdebtRatio()"> Calculate</button>
+      <br><br>
+      <p id="debtRatio"> Debt to Equity Ratio: </p>
+
+  </div>
+
+  <div class = "ratioContainerMP">
+    <h2> Equity Ratio  </h2> <br>
+    <p>Measures the amount of assets that are financed by owners' investments and through investors
+      by comparing the total equity in the company to total assets. Equity ratios emphasizes two imperative
+      financial concepts; firstly, it shows how much of the total company assets are owned outright by the
+      investors. Secondly,  inversely shows how leveraged the company is with debt. Moreover, higher equity
+      ratios are typically favourable for companies as high investment levels from shareholders shows potential
+      shareholders that the company is worth investing in.
+      </p>
+
+      <label for = "Total Equity:"> Total Equity: </label> <br>
+      <input id = "total_E" />
+      <br>
+      <label for = "Total Assets:"> Total Assets: </label> <br>
+      <input id = "totalA" />
+      <br>
+      <br>
+      <button class="buttonCalc" <button onclick="equityRatio()"> Calculate</button>
+      <br><br>
+      <p id="equity_Ratio"> Equity Ratio: </p>
+
+
+  </div>
+
+  <div class = "ratioContainerMP">
+    <h2> Debt Ratio  </h2> <br>
+    <p>
+       Measures a firm’s total liabilities as a percentage of its total assets,
+       it shows how many assets the company must sell in order to pay off all of its
+       liabilities. The debt ratio is shown in decimal format since it calculates total
+       liabilities as a percentage of total assets. Furthermore, a lower ratio is more
+       favourable than a higher ratio as it indicates that the company is more stable,
+       with a potential for longevity due to a lower overall debt. A debt ratio of 0.5
+       is considered less risky than say 1 or higher as it shows the company has twice
+       as many assets than liabilities.
+      </p>
+
+      <label for = "Total Liabilites:"> Total Liabilites: </label> <br>
+      <input id = "total_L" />
+      <br>
+      <label for = "Total Assets:"> Total Assets: </label> <br>
+      <input id = "total_A" />
+      <br>
+      <br>
+      <button class="buttonCalc" <button onclick="debtRatio()"> Calculate</button>
+      <br><br>
+      <p id="debt_Ratio"> Debt Ratio: </p>
+
+
+  </div>
+</div>
+
+<br>
+<br>
+
+</center>
+
+<div class = "footer">
+  <div class = "inner_footer">
+    <div class = "logo_container">
+        <img src = "Images/footer_logo.png">
+    </div>
+
+    <div class = "footer_third">
+        <h1> Need Help? </h1>
+        <a href = "#"> Contact Us: </a>
+        <a href = "#"> hkhan24@uoguelph.ca </a>
+    </div>
+
+    <div class = "footer_third">
+        <h1> More </h1>
+        <a href = "#"> Credits</a>
+        <a href = "#"> Financial Ratios</a>
+        <a href = "#"> Return Home</a>
+        <a href = "#"> Coming Soon </a>
+
+    </div>
+
+    <div class = "footer_third">
+        <h1> Follow Us </h1>
+        <li2><a href = "#"> <img src = Images/ig.png></a></li2>
+        <li2><a href = "#"> <img src = Images/linkedin.png></a></li2>
+        <li2><a href = "#"> <img src = Images/twitter.png></a></li2>
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+
+function calcdebtRatio(){
+
+  var totalL, totalE, finalAnswer;
+
+  totalE = Number(document.getElementById("totalE").value);
+  totalL = Number(document.getElementById("totalL").value);
+
+  if (isNaN(totalL) || isNaN(totalE)) {
+
+    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
+
+  } else if ((totalL == "") || (totalE == "")){
+    alert("All Input Feilds Must Be Filled");
+
+      } else {
+
+      finalAnswer = totalL/ totalE;
+
+      }
+
+  document.getElementById("debtRatio").innerHTML = "Debt to Equity Ratio: " + finalAnswer;
+
+}
+
+function equityRatio(){
+
+  var total_E, totalA, finalAnswer;
+
+  total_E = Number(document.getElementById("total_E").value);
+  totalA = Number(document.getElementById("totalA").value);
+
+  if (isNaN(totalA) || isNaN(total_E)) {
+
+    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
+
+  } else if ((totalA == "") || (total_E == "")){
+    alert("All Input Feilds Must Be Filled");
+
+      } else {
+
+      finalAnswer = total_E / totalA;
+
+      }
+
+  document.getElementById("equity_Ratio").innerHTML = "Equity Ratio: " + finalAnswer;
+
+}
+
+function equityRatio(){
+
+  var total_L, total_A, finalAnswer;
+
+  total_L = Number(document.getElementById("total_L").value);
+  total_A = Number(document.getElementById("total_A").value);
+
+  if (isNaN(total_A) || isNaN(total_L)) {
+
+    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
+
+  } else if ((total_A == "") || (total_L == "")){
+    alert("All Input Feilds Must Be Filled");
+
+      } else {
+
+      finalAnswer = total_L / total_A;
+
+      }
+
+  document.getElementById("debt_Ratio").innerHTML = "Debt Ratio: " + finalAnswer;
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

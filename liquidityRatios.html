@@ -106,6 +106,27 @@
 
 
   </div>
+
+  <div class = "ratioContainerMP">
+    <h2> Times Interest Earned Ratio  </h2> <br>
+    <p>Measures the proportionate amount of income that can be used to cover interest expenses in the future.
+       Furthermore, the ratio indicates how many times a company could pay the interest with income before it's
+       taxed, thus a larger ratio is more preferable. A ratio of 2 means that the company makes enough income to
+       pay for it’s interest expense two times over.  </p>
+
+      <label for = "Income before interest and taxes:"> Income before interest and taxes: </label> <br>
+      <input id = "income" />
+      <br>
+      <label for = "Interest Expenses:"> Interest Expenses: </label> <br>
+      <input id = "intExp" />
+      <br>
+      <br>
+      <button class="buttonCalc" <button onclick="timeInterest()"> Calculate</button>
+      <br><br>
+      <p id="timeInterest"> Time Interest Earned Ratio: </p>
+
+
+  </div>
 </div>
 
 <br>
@@ -198,6 +219,26 @@ function currentRatio(){
 
   document.getElementById("currentRatio").innerHTML = "Current Ratio: " + finalAnswer;
 
+}
+
+function timeInterest() {
+
+  var income, intExp, finalAnswer;
+
+  income = Number (document.getElementById("income").value);
+  intExp = Number(document.getElementById("intExp").value);
+
+  if (isNaN(income) || isNaN(intExp)){
+    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
+
+  } else if ((income == "") || (intExp == "")) {
+    alert("All Input Feilds Must Be Filled");
+  } else {
+
+  finalAnswer = income / intExp;
+  }
+
+  document.getElementById("timeInterest").innerHTML = "Times Interest Earned Ratio: " + finalAnswer;
 }
 
 
