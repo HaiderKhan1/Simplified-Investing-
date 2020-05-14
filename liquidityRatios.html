@@ -165,85 +165,8 @@
   </div>
 </div>
 
-<script>
+<script src="simplifiedInvesting.js"></script>
 
-function calcquickRatio() {
-var currentAssets;
-var cL;
-var inventory;
-var preExpense;
-var finalAnswer;
-var numerator;
-
-currentAssets = Number(document.getElementById("currentAssets").value);
-cL = Number(document.getElementById("cL").value);
-inventory = Number(document.getElementById("inventory").value);
-preExpense = Number(document.getElementById("preExpense").value);
-
-if (isNaN(currentAssets) || isNaN(cL) || isNaN(inventory) || isNaN(preExpense)) {
-
-  finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
-
-} else if ((currentAssets == "") || (cL == "") || (inventory == "") || (preExpense == "")){
-  alert("All Input Feilds Must Be Filled");
-
-    } else {
-
-    numerator = currentAssets - inventory - preExpense;
-    finalAnswer = numerator / cL;
-
-    }
-
-document.getElementById("quickRatio").innerHTML = "Quick Ratio: " + finalAnswer;
-
-}
-
-function currentRatio(){
-  var cA, currentL, finalAnswer;
-
-  cA = Number(document.getElementById("cA").value);
-  currentL = Number(document.getElementById("currentL").value);
-
-  if (isNaN(cA) || isNaN(currentL)) {
-
-    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
-
-  } else if ((cA == "") || (currentL == "")){
-    alert("All Input Feilds Must Be Filled");
-
-      } else {
-
-      finalAnswer = cA / currentL;
-
-      }
-
-  document.getElementById("currentRatio").innerHTML = "Current Ratio: " + finalAnswer;
-
-}
-
-function timeInterest() {
-
-  var income, intExp, finalAnswer;
-
-  income = Number (document.getElementById("income").value);
-  intExp = Number(document.getElementById("intExp").value);
-
-  if (isNaN(income) || isNaN(intExp)){
-    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
-
-  } else if ((income == "") || (intExp == "")) {
-    alert("All Input Feilds Must Be Filled");
-  } else {
-
-  finalAnswer = income / intExp;
-  }
-
-  document.getElementById("timeInterest").innerHTML = "Times Interest Earned Ratio: " + finalAnswer;
-}
-
-
-
-</script>
 
 
 </body>

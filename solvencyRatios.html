@@ -165,84 +165,8 @@
   </div>
 </div>
 
-<script>
+<script src="simplifiedInvesting.js"></script>
 
-
-function calcdebtRatio(){
-
-  var totalL, totalE, finalAnswer;
-
-  totalE = Number(document.getElementById("totalE").value);
-  totalL = Number(document.getElementById("totalL").value);
-
-  if (isNaN(totalL) || isNaN(totalE)) {
-
-    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
-
-  } else if ((totalL == "") || (totalE == "")){
-    alert("All Input Feilds Must Be Filled");
-
-      } else {
-
-      finalAnswer = totalL/ totalE;
-
-      }
-
-  document.getElementById("debtRatio").innerHTML = "Debt to Equity Ratio: " + finalAnswer;
-
-}
-
-function equityRatio(){
-
-  var total_E, totalA, finalAnswer;
-
-  total_E = Number(document.getElementById("total_E").value);
-  totalA = Number(document.getElementById("totalA").value);
-
-  if (isNaN(totalA) || isNaN(total_E)) {
-
-    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
-
-  } else if ((totalA == "") || (total_E == "")){
-    alert("All Input Feilds Must Be Filled");
-
-      } else {
-
-      finalAnswer = total_E / totalA;
-
-      }
-
-  document.getElementById("equity_Ratio").innerHTML = "Equity Ratio: " + finalAnswer;
-
-}
-
-function debtRatio(){
-
-  var total_L, total_A, finalAnswer;
-
-  total_L = Number(document.getElementById("total_L").value);
-  total_A = Number(document.getElementById("total_A").value);
-
-  if (isNaN(total_A) || isNaN(total_L)) {
-
-    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
-
-  } else if ((total_A == "") || (total_L == "")){
-    alert("All Input Feilds Must Be Filled");
-
-      } else {
-
-      finalAnswer = total_L / total_A;
-
-      }
-
-  document.getElementById("debt_Ratio").innerHTML = "Debt Ratio: " + finalAnswer;
-
-}
-
-
-
-</script>
 
 
 </body>
