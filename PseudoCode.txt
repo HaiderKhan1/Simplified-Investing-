@@ -1,0 +1,36 @@
+Pseudo Code: 
+
+var eps = calcEps();
+var divPayout = calcDivPayout ();
+var divYeild = calc DivYeild (); 
+
+function analyzeMarketPropect (eps, divPayout, divYeild){
+var check; 
+var notCheck;
+
+check if each ratio's analysis is decent 
+
+if eps > 1 
+check; 
+
+else 
+
+notCheck 
+
+if divPayout > 1 
+check
+
+else 
+
+notCheck 
+
+if divYeild > 1 
+check
+
+else 
+
+notCheck
+
+
+
+}
