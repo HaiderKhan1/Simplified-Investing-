@@ -349,3 +349,101 @@ function returnOnEquity(){
   document.getElementById("returnOnEquity").innerHTML = "Return on Equity Ratio: " + finalAnswer;
 
 }
+
+// Effeciency Ratios //
+
+function receviableTurnover(){
+
+  var creditSales, accountsReceviable, finalAnswer;
+
+  creditSales = Number(document.getElementById("creditSales").value);
+  accountsReceviable = Number(document.getElementById("accountsReceviable").value);
+
+  if (isNaN(creditSales) || isNaN(accountsReceviable)) {
+
+    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
+
+  } else if ((creditSales == "") || (accountsReceviable == "")){
+    alert("All Input Feilds Must Be Filled");
+
+      } else {
+
+      finalAnswer = creditSales / accountsReceviable;
+
+      }
+
+  document.getElementById("receviableTurnover").innerHTML = "Accounts Receivable Turnover Ratio: " + finalAnswer;
+
+}
+
+function assetTurnover(){
+
+  var netSales, total_assets, finalAnswer;
+
+  netSales = Number(document.getElementById("netSales").value);
+  total_assets = Number(document.getElementById("total_assets").value);
+
+  if (isNaN(netSales) || isNaN(total_assets)) {
+
+    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
+
+  } else if ((netSales == "") || (total_assets == "")){
+    alert("All Input Feilds Must Be Filled");
+
+      } else {
+
+      finalAnswer = netSales / total_assets;
+
+      }
+
+  document.getElementById("assetTurnover").innerHTML = "Asset Turnover Ratio: " + finalAnswer;
+
+}
+
+function inventoryTurnover(){
+
+  var cogs, averageInventory, finalAnswer;
+
+  cogs = Number(document.getElementById("cogs").value);
+  averageInventory = Number(document.getElementById("averageInventory").value);
+
+  if (isNaN(cogs) || isNaN(averageInventory)) {
+
+    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
+
+  } else if ((cogs == "") || (averageInventory == "")){
+    alert("All Input Feilds Must Be Filled");
+
+      } else {
+
+      finalAnswer = cogs / averageInventory;
+
+      }
+
+  document.getElementById("inventoryTurnover").innerHTML = "Inventory Turnover Ratio: " + finalAnswer;
+
+}
+
+function daySales(){
+
+  var COGS, endingInventory, finalAnswer;
+
+  endingInventory = Number(document.getElementById("endingInventory").value);
+  COGS = Number(document.getElementById("COGS").value);
+
+  if (isNaN(endingInventory) || isNaN(COGS)) {
+
+    finalAnswer = "Hmm looks like your input was not accepted <br> Please check your input: <br> (1) Is just numbers <br> (2) There are no alphabets <br> (3) No special characters other then decimal <br> (4) All input feilds have been filled";
+
+  } else if ((endingInventory == "") || (COGS == "")){
+    alert("All Input Feilds Must Be Filled");
+
+      } else {
+
+      finalAnswer = (endingInventory / COGS) * 365;
+
+      }
+
+  document.getElementById("daySales").innerHTML = "Day's Sales In Inventory Ratio: " + finalAnswer;
+
+}

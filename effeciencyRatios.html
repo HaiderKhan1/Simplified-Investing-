@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Efficiency  Ratios</title>
+<link rel = "shortcut icon" type = "image png" href= "Images/favicon.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = "stylesheet" type = "text/css" href = "webstyle.css">
+</head>
+<body>
+
+  <ul class="topnav">
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="one.html">Intro to Financial Analysis</a></li>
+    <li><a href="two.html">Where to Find Financial Information</a></li>
+    <li><a href="three.html">Perform Financial Analysis</a></li>
+
+  </ul>
+
+<header>
+    <a href="home.html">
+    <img src="Images/logo_transparent.png" alt="Logo" style = width:30%;>
+  </a>
+</header>
+
+<br>
+<br>
+
+
+<div class="row">
+
+  <div class = "column side">
+  </div>
+
+  <div class="column middle">
+    <center>
+    <h1 style = "font-size: 3vw; font-family: sans-serif;">
+   Efficiency Ratios  </font>
+   </h1>
+   <br>
+   <p style="font-family: Parkavenue; font-size:1.5vw;">
+ Measure how well a company can utilize their assets to generate income. Not only that,
+ these ratios also indicate the time it takes for companies to collect cash from its customers
+ or the amount of time it takes to convert inventory into cash.
+    </p>
+</center>
+<br>
+</div>
+
+<div class = "column side">
+  </div>
+</div>
+
+<center>
+<div class = "ratioContainerOverallMP">
+
+  <div class = "ratioContainerMP">
+    <h2>Accounts Receivable Turnover Ratio </h2> <br>
+    <p>Measure how many times a business can turn its accounts receivable into cash during a period.
+       Furthermore, this is an imperative ratio as it indicates how efficiently a company is at collecting
+       its credit sales from customers. Moreover, a higher accounts receivable turnover ratio
+       is more favourable as it shows that the company is collecting their receivables more frequently throughout the year.
+  </p>
+
+      <label for = "Net Credit Sales:"> Net Credit Sales: </label> <br>
+      <input id = "creditSales" />
+      <br>
+      <label for = "Average Accounts Receivable:"> Average Accounts Receivable: </label> <br>
+      <input id = "accountsReceviable" />
+      <br>
+      <br>
+      <button class="buttonCalc" <button onclick = "receviableTurnover()"> Calculate</button>
+      <br><br>
+      <p id="receviableTurnover"> Accounts Receivable Turnover Ratio: </p>
+
+
+  </div>
+
+  <div class = "ratioContainerMP">
+    <h2> Assets Turnover Ratio </h2> <br>
+    <p> Measures a company’s ability to generate sales from its assets by comparing net
+       sales with average total assets. Moreover, a higher assets turnover ratio is more
+       favourable as it indicates that the company can effectively use its assets to generate sales.  </p>
+
+      <label for = "Net Sales:"> Net Sale: </label> <br>
+      <input id = "netSales" />
+      <br>
+      <label for = "Average Total Assets:"> Average Total Assets: </label> <br>
+      <input id = "total_assets" />
+      <br>
+      <br>
+      <button class="buttonCalc" <button onclick="assetTurnover()"> Calculate</button>
+      <br><br>
+      <p id="assetTurnover"> Asset Turnover Ratio: </p>
+
+  </div>
+
+  <div class = "ratioContainerMP">
+    <h2> Inventory Turnover Ratio </h2> <br>
+    <p>Measures how efficiently a company can manage its inventory and turn it or sell it during a period.
+      Furthermore, it is imperative that the company should have a high inventory turnover ratio as it indicates
+      that the company does not overspend by buying too much inventory. Not only that, it shows that the company
+      can effectively sell the inventory it buys.  </p>
+
+      <label for = "Cost of Goods Solds:"> Cost of Goods Solds: </label> <br>
+      <input id = "cogs" />
+      <br>
+      <label for = "Average Inventory:"> Average Inventory: </label> <br>
+      <input id = "averageInventory" />
+      <br>
+      <br>
+      <button class="buttonCalc" <button onclick="inventoryTurnover()"> Calculate</button>
+      <br><br>
+      <p id="inventoryTurnover"> Inventory Turnover Ratio: </p>
+
+
+  </div>
+
+  <div class = "ratioContainerMP">
+    <h2>Day's Sales In Inventory Ratio:  </h2> <br>
+    <p> Measures the number of days it will take a company to sell all of its inventory. Furthermore,
+      this is an important ratio as it measures value, liquidity and cash flows; as it shows investors
+      and creditors how valuable a company’s inventory is as newer inventory is worth more than older ones.
+      Moreover, it is more favourable that inventory is sold in less days to minimize costs and make sure
+      inventory moves as fast as possible to generate cash flow. Otherwise,  it can start costing the company
+      extra money if it sits for longer.   </p>
+
+      <label for = "Ending Inventory:"> Ending Inventory: </label> <br>
+      <input id = "endingInventory" />
+      <br>
+      <label for = "Cost of Goods Solds:"> Cost of Goods Solds: </label> <br>
+      <input id = "COGS" />
+      <br>
+      <br>
+      <button class="buttonCalc" <button onclick="daySales()"> Calculate</button>
+      <br><br>
+      <p id="daySales">Day's Sales In Inventory Ratio: </p>
+
+
+  </div>
+</div>
+
+<br>
+<br>
+
+</center>
+
+<div class = "footer">
+  <div class = "inner_footer">
+    <div class = "logo_container">
+        <a href = "index.html">
+        <img src = "Images/footer_logo.png">
+      </a>
+    </div>
+
+    <div class = "footer_third">
+        <h1> Need Help? </h1>
+        <a href = "#"> Contact Us: </a>
+        <a href = "#"> hkhan24@uoguelph.ca </a>
+    </div>
+
+    <div class = "footer_third">
+        <h1> More </h1>
+        <a href = "credits.html"> Credits</a>
+        <a href = "comingSoon.html"> Coming Soon </a>
+        <a href = "index.html"> Return Home</a>
+        <a href = "ratiosMain.html"> Financial Ratios</a>
+
+    </div>
+
+    <div class = "footer_third">
+        <h1> Follow Us </h1>
+        <li2><a href = "http://www.instagram.com/simplifiedlnvesting"> <img src = Images/ig.png></a></li2>
+        <li2><a href = "https://www.linkedin.com/in/haider-khan-"> <img src = Images/linkedin.png></a></li2>
+        <li2><a href = "https://twitter.com/HaiderK62907923"> <img src = Images/twitter.png></a></li2>
+    </div>
+  </div>
+</div>
+
+<script src="simplifiedInvesting.js"></script>
+
+
+</body>
+</html>
