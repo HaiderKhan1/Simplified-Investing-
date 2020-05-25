@@ -7,6 +7,10 @@ header {
   color: white;
 }
 
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
 /*top nav */
 body {margin:
   0;
@@ -360,4 +364,73 @@ li a:hover:not(.active) {
 
 .buttonCalc:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* CSS FOR FINANCIAL STATEMETS PAGE */
+
+  /*create the container for balance sheet */
+
+.balanceSheet_container {
+  display: flex;
+  width: 98%
+}
+
+.balanceSheet_pic {
+  flex: 1;
+  padding: 10px;
+  background-color:#87868C;
+}
+
+.balanceSheet_info {
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.balanceSheet_info h2 {
+  font-family: monospace;
+  font-size: 2vw;
+}
+
+.balanceSheet_info p {
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  padding-bottom: 10px;
+}
+
+/*create the container for income sheet */
+
+.incomeStatement_container {
+display: flex;
+width: 98%
+}
+
+.incomeStatement_info {
+flex: 3;
+padding: 10px;
+background-color: #f1f1f1;
+
+}
+
+.incomeStatement_pic {
+flex: 1;
+background-color:#87868C;
+padding: 10px;
+}
+
+.incomeStatement_info h2 {
+font-family: monospace;
+font-size: 2vw;
+}
+
+.incomeStatement_info p {
+font-family: sans-serif;
+font-size: 1.5vw;
+padding-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .incomeStatement_container, .balanceSheet_container  {
+    flex-direction: column;
+  }
 }
