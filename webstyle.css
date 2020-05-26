@@ -84,7 +84,7 @@ li a:hover:not(.active) {
 /*mainpage: after main text */
 /* Create three equal columns that floats next to each other */
 .overallContainer {
-  max-width: 1400px;
+  max-width: 98%;
   margin: 40px auto 0 auto;
   padding-bottom: 50px;
 }
@@ -431,6 +431,33 @@ padding-bottom: 10px;
 
 @media (max-width: 600px) {
   .incomeStatement_container, .balanceSheet_container  {
+    flex-direction: column;
+  }
+}
+
+/*FiNANCIAL INFORMATION PAGE IMAGES FLEX LAYOUT */
+.picContainer {
+  display: flex;
+  width: 94%;
+}
+
+.picContainer_left {
+  flex: 1;
+  padding: 20px;
+}
+
+.picContainer_middle {
+  flex: 1;
+  padding: 20px;
+}
+
+.picContainer_right {
+  flex: 1;
+  padding: 20px;
+}
+
+@media (max-width: 600px){
+  .picContainer {
     flex-direction: column;
   }
 }
