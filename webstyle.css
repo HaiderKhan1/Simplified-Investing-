@@ -1,10 +1,29 @@
-/*header block */
+
 header {
-  background-color: #FFF748;
+  width: 100%
+  display: block;
+  overflow: hidden;
   padding: 40px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
+  box-sizing: border-box;
+  background-color: #FFF748;
+}
+
+.header_image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+  header{
+    padding:100px;
+  }
+
+  .header_image{
+    padding-top: 100px;
+    width: 60%;
+  }
 }
 
 .responsive {
@@ -12,8 +31,8 @@ header {
   height: auto;
 }
 /*top nav */
-body {margin:
-  0;
+body {
+  margin: 0;
 }
 
 ul {
@@ -60,26 +79,32 @@ li a:hover:not(.active) {
 }
 
 /* Create three unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 5px;
+.column_text {
+  width:90%;
+  display: flex;
+  margin: 40px auto 0 auto;
 }
 
-.column.side{
-  width:5%;
+.column_text h1{
+  font-size: 4vw;
+  font-family: sans-serif;
 }
 
-/* Middle column */
-.column.middle {
-  width: 90%;
+.column_text p {
+  font-family: sans-serif;
+  font-size: 1.75vw;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+@media screen and (max-width: 600px){
+  .colum_text h1{
+    font-size: 6vw;
+  }
+
+  .column_text p {
+    font-size: 3.25vw;
+  }
 }
+
 
 /*mainpage: after main text */
 /* Create three equal columns that floats next to each other */
@@ -129,49 +154,80 @@ li a:hover:not(.active) {
     display: flex;
     justify-content: space-between;
   }
+
+  /*MAINPAGE buttons for columns */
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button:hover span {
+    padding-right: 25px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 }
 
 
-/*MAINPAGE buttons for columns */
-.button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
+@media only screen and (max-width : 600px){
+  .button {
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+
+  .button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .columnSection h2{
+    font-size: 5.15vw;
+  }
+
+  .columnSection p {
+    margin: auto;
+    font-size: 3.25vw;
+  }
 }
 
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
 
 /*footer */
 *{
@@ -313,6 +369,18 @@ li a:hover:not(.active) {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+@media(max-width: 600px){
+  .ratioContainer h2 {
+    font-size: 4vw;
+  }
+
+  .ratioContainer p {
+    font-size: 2.5vw;
+  }
+
+
+}
+
 /*MarketProspect Ratios overall UI */
 .ratioContainerOverallMP {
   display: flex;
@@ -364,6 +432,19 @@ li a:hover:not(.active) {
 
 .buttonCalc:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+@media(max-width: 600px){
+  .ratioContainerMP h2 {
+    font-size: 4vw;
+  }
+
+  .ratioContainerMP p {
+    font-size: 3vw;
+    margin: 10px;
+  }
+
+
 }
 
 /* CSS FOR FINANCIAL STATEMETS PAGE */
@@ -433,6 +514,26 @@ padding-bottom: 10px;
   .incomeStatement_container, .balanceSheet_container  {
     flex-direction: column;
   }
+
+  .incomeStatement_info h2 {
+  font-size: 4vw;
+  }
+
+  .incomeStatement_info p {
+  font-size: 3vw;
+
+  }
+
+  .balanceSheet_info h2 {
+    font-size: 4vw;
+  }
+
+  .balanceSheet_info p {
+    font-size: 3vw;
+
+
+  }
+
 }
 
 /*FiNANCIAL INFORMATION PAGE IMAGES FLEX LAYOUT */
